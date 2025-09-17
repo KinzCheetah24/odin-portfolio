@@ -139,3 +139,51 @@
 .work-container .projects-container .project .project-info .project-icons svg {
     width: 20px;
 }
+
+.contact-container {
+    height: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 100px;
+
+    background-color: rgb(50, 164, 230);
+
+    color: white;
+}
+
+.contact-container .contact-data {
+    height: 500px;
+    width: 450px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    gap: 30px;
+}
+
+.contact-container .contact-data div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.contact-container .contact-data svg {
+    width: 20px;
+
+    fill: white;
+}
+
+.contact-container .contact-data .icons svg {
+    width: 30px;
+}
+
+.contact-container img {
+    height: 500px;
+}
