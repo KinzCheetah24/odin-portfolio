@@ -44,6 +44,8 @@
 }
 
 .title-container .profile h1 {
+    width: 200px;
+
     font-size: 3rem;
     font-weight: 400;
     color: white;
@@ -112,7 +114,7 @@
     width: 1000px;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(3, minmax(300px, 500px));
 
     gap: 60px 50px;
 }
@@ -163,6 +165,8 @@
 
     gap: 100px;
 
+    padding: 50px 100px;
+
     background-color: rgb(50, 164, 230);
 
     color: white;
@@ -202,7 +206,7 @@
     height: 500px;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and ((width >= 700px) and (width <= 1100px)) {
     .blue-skew-shape {
         z-index: -1;
     }
@@ -243,5 +247,126 @@
         margin-left: 130px;
 
         padding: 30px;
+    }
+
+    .work-container h1 {
+        width: 100%;
+    }
+
+    .work-container .projects-container {
+        width: 100%;
+
+        grid-template-columns: repeat(2, minmax(200px, 500px));
+    }
+
+    .work-container .projects-container .project {
+        width: 100%;
+    }
+
+    .contact-container .contact-data {
+        height: 400px;
+        width: 200px;
+    }
+
+    .contact-container img {
+        height: 400px;
+    }
+}
+
+@media screen and (width < 700px) {
+    .blue-skew-shape {
+        transform: skewY(-20deg);
+    }
+
+    .title-container {
+        display: flex;
+        flex-direction: column;
+
+        padding: 10px 20px;
+    }
+
+    .title-container .profile {
+        width: 100%;
+    }
+
+    .title-container .about-me-section {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: none;
+    }
+
+    .title-container .about-me-section p {
+        margin: 0;
+    }
+
+    .work-container {
+        padding: 10px 20px;
+    }
+
+    .work-container h1 {
+        width: 100%;
+    }
+
+    .work-container .projects-container {
+        width: 100%;
+
+        grid-template-columns: repeat(1, minmax(200px, 700px));
+    }
+
+    .work-container .projects-container .project {
+        height: 600px;
+        width: 100%;
+
+        grid-template-rows: 350px 250px;
+    }
+
+    .contact-container {
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+    }
+
+    .contact-container .contact-data {
+        height: auto;
+        width: auto;
+
+        margin-top: 30px;
+
+        padding: 10px 20px;
+    }
+
+    .contact-container .contact-data h1 {
+        align-self: center;
+
+        font-size: 3rem;
+    }
+
+    .contact-container .contact-data p {
+        font-size: 1.7rem;
+    }
+
+    .contact-container .contact-data .icons {
+        align-self: center;
+
+        gap: 50px;
+    }
+
+    .contact-container .contact-data .icons svg{
+        width: 50px;
+    }
+
+    .contact-container img {
+        height: auto;
+        width: 100%;
     }
 }
